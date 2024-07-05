@@ -1,0 +1,61 @@
+---
+import "@fontsource-variable/inter-tight";
+import "../styles/global.css";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <div class="app" data-scroll-container>
+      <div class="cover">
+        <img
+          class="logo"
+          src="/astrobuildclub-wordmark.svg"
+          alt="AstroBuildClub™"
+        />
+        <p class="intro">
+          Hello world, We are the AstroBuildClub™ We build custom websites for
+          creatives and agencies using the astro framework.
+        </p>
+      </div>
+      <div class="content" role="main"></div>
+      <footer id="footer" class="footer">
+        <h5 class="footer-label" data-scroll data-scroll-speed=".5">
+          Seal the deal, with Neil
+        </h5>
+        <h3 class="footer-headline" data-scroll data-scroll-speed="1">
+          Let's set you up for success
+        </h3>
+        <img
+          data-scroll
+          data-scroll-speed="2.5"
+          class="neil"
+          src="/astrobuildclub-neil.svg"
+          alt="Neil the astronaut"
+        />
+        <a data-scroll data-scroll-speed="3" href="#" class="btn"
+          >Buy your website today!</a
+        >
+
+        <canvas id="drawingCanvas"></canvas>
+      </footer>
+    </div>
+  </body>
+</html>
+
+<script>
+  //@ts-nocheck
+  import "locomotive-scroll/dist/locomotive-scroll.css";
+  import LocomotiveScroll from "locomotive-scroll";
+
+  const scroll = new LocomotiveScroll({
+    el: document.querySelector("[data-scroll-container]"),
+    smooth: true,
+  });
+</script>
